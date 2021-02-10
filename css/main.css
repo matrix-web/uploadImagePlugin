@@ -88,6 +88,12 @@ body {
   overflow: hidden;
 }
 
+.preview__image .preloader {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
 .preview__image.removing {
   transform: scale(0);
   transition: transform .3s ease-in;

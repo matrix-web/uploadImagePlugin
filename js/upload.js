@@ -52,9 +52,8 @@ export default class Upload {
       } else {
         this.#buttonUpload = this.#createElement('button', ['button', 'button--upload'], 'Загрузить')
         this.#buttonUpload.style.display = 'none'
-        this.input.insertAdjacentElement('afterend', this.#buttonUpload)
+        document.querySelector(this.options.buttonDownLoad.selectorPos).insertAdjacentElement(this.options.buttonDownLoad.pos, this.buttonDownLoad)
       }
-      
 
       this.#buttonUpload.addEventListener('click', this.#uploadHandler.bind(this))
     }

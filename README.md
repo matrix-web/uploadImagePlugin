@@ -23,7 +23,9 @@ options:
 * opUpload функция, которая позволяет обрабатывать файлы
 * Для modeView 'custom' можно указать
   * buttonDownLoad
-    * el поле в котором размещается html - элемент с вашей кнопкой 'Загрузить'
+    * el поле в котором размещается html - элемент с вашей кнопкой 'Загрузить'. Данный параметр можно не указывать будет использоваться кнопка по умолчанию.
+    * selectorPos - селектор элемента, в который будует помещена кнопка
+    * pos - позация куда необходимо разместить кнопку 'beforebegin', 'beforeend', 'afterbegin', 'afterend', относительно элемента с селектором selectorPos
   * buttonOpen
     * el поле в котором размещается html - элемент с вашей кнопкой 'Открыть'
   * previewPos можно указать:
@@ -69,6 +71,8 @@ const customUpload = new Upload('#file', {
   modeView: 'custom',
   buttonDownLoad: {
     el: document.querySelector('[data-button-download]'), // Пользовательская кнопка Загрузки
+    selectorPos: 'selector',
+    pos: 'beforeend'
   },
   buttonOpen: {
     el: document.querySelector('[data-button-open]') // Пользовательская кнопка Открыть
